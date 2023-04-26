@@ -19,12 +19,23 @@ window.addEventListener('scroll', function(event) {
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
- 
+const rearrangeBtn = document.getElementById('rearrange-btn');
+const ex3Animals = document.getElementById('ex3-animals');
+
+rearrangeBtn.addEventListener('click', function(){
+  ex3Animals.appendChild(ex3Animals.firstElementChild)
+})
+
 
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
-
-
+const colorizeBtn = document.getElementById('colorize-btn'); 
+const colors = ['blue','red','green', 'pink', 'yellow']
+let counter = 0;
+colorizeBtn.addEventListener('click', function(event){
+  colorizeBtn.style.background = colors[counter%colors.length]
+  counter++;
+})
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
 
