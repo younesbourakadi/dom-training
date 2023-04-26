@@ -12,11 +12,14 @@ btnToggle.addEventListener('click', function(){
 
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
-
+const scrollValue = document.getElementById('ex2-scroll-value');
+window.addEventListener('scroll', function(event) {
+  scrollValue.innerHTML = Math.round(window.scrollY);
+})
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
-
+ 
 
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
