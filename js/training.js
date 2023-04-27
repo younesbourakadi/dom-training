@@ -13,7 +13,7 @@ btnToggle.addEventListener('click', function(){
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
 const scrollValue = document.getElementById('ex2-scroll-value');
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function() {
   scrollValue.innerHTML = Math.round(window.scrollY);
 })
 
@@ -32,7 +32,7 @@ rearrangeBtn.addEventListener('click', function(){
 const colorizeBtn = document.getElementById('colorize-btn'); 
 const colors = ['blue','red','green', 'pink', 'yellow']
 let counter = 0;
-colorizeBtn.addEventListener('click', function(event){
+colorizeBtn.addEventListener('click', function(){
   colorizeBtn.style.background = colors[counter%colors.length]
   counter++;
 })
@@ -81,7 +81,7 @@ const button = document.getElementById("ex7-button");
 const todos = document.getElementById("ex7-list");
 let todoCounter = 0;
 
-button.addEventListener("click", function(event){
+button.addEventListener("click", function(){
   if (todoCounter < taskList.length) {
     const todo = document.createElement("li");
     todo.innerHTML= taskList[todoCounter];
