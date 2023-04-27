@@ -39,7 +39,14 @@ colorizeBtn.addEventListener('click', function(event){
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
 
+const buttons = document.querySelectorAll('.button');
 
+buttons.forEach(function(button) {
+  button.addEventListener('mouseover', function(){
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    button.style.backgroundColor = '#' + randomColor;
+  });
+});
 /* ------------------------------------ */
 /* --- Exercice 6 --- */
 
