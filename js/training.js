@@ -39,7 +39,7 @@ colorizeBtn.addEventListener('click', function(){
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
 
-const buttons = document.querySelectorAll('.button');
+const buttons = document.querySelectorAll('.flex-list .button');
 
 buttons.forEach(function(button) {
   button.addEventListener('mouseover', function(){
