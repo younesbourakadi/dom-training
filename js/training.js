@@ -77,6 +77,26 @@ const taskList = [
   "🌳 Tondre la pelouse"
 ];
 
+const button = document.getElementById("ex7-button");
+const todos = document.getElementById("ex7-list");
+let todoCounter = 0;
+
+button.addEventListener("click", function(event){
+  if (todoCounter < taskList.length) {
+    const todo = document.createElement("li");
+    todo.innerHTML= taskList[todoCounter];
+    todo.classList.add("todo");
+    todos.appendChild(todo);
+    todoCounter++;
+  }
+});
+
+todos.addEventListener("click", function(event){
+  if (event.target.classList.contains("todo")) {
+    event.target.remove();
+    todoCounter--;
+  }
+});
 
 /* ------------------------------------ */
 /* --- Exercice 8 --- */
