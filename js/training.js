@@ -100,3 +100,34 @@ todos.addEventListener("click", function(event){
 
 /* ------------------------------------ */
 /* --- Exercice 8 --- */
+const levelButton = document.getElementById("ex8-button-level");
+const levelBar = document.getElementById("ex8-level");
+const strengthButton = document.getElementById("ex8-button-strength");
+const strengthBar = document.getElementById("ex8-strength");
+const shieldButton = document.getElementById("ex8-button-shield");
+const shieldBar = document.getElementById("ex8-shield");
+
+let levelCounter = 0;
+let strengthCounter = 0;
+let shieldCounter = 0;
+
+function updateCounterAndBar(counter, bar) {
+  counter += 5;
+  if (counter > 100) {
+    counter = 100;
+  }
+  bar.style.width = `${counter}%`;
+  return counter;
+}
+
+levelButton.addEventListener("click", function () {
+  levelCounter = updateCounterAndBar(levelCounter, levelBar);
+});
+
+strengthButton.addEventListener("click", function () {
+  strengthCounter = updateCounterAndBar(strengthCounter, strengthBar);
+});
+
+shieldButton.addEventListener("click", function () {
+  shieldCounter = updateCounterAndBar(shieldCounter, shieldBar);
+});
