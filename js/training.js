@@ -49,7 +49,20 @@ buttons.forEach(function(button) {
 });
 /* ------------------------------------ */
 /* --- Exercice 6 --- */
+const paragraph = document.getElementById("ex6-paragraph");
+let index = 0;
+const text = paragraph.innerHTML;
 
+function printParargaph() {
+  if (index < text.length) {
+    paragraph.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(printParargaph, 50);
+  }
+}
+
+paragraph.innerText = "";
+printParargaph();
 
 
 /* ------------------------------------ */
